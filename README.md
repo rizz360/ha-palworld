@@ -1,6 +1,6 @@
 <img src="docs/icon.jpg" alt="Palworld Server integration icon" width="96" height="96" align="left">
 
-# Palworld Server for Home Assistant
+# Home Assistant Integration for Palworld Servers
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 [![HACS Validation](https://github.com/rizz360/ha-palworld/actions/workflows/hacs.yaml/badge.svg)](https://github.com/rizz360/ha-palworld/actions/workflows/hacs.yaml)
