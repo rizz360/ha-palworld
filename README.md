@@ -1,6 +1,10 @@
+<img src="docs/icon.jpg" alt="Palworld Server integration icon" width="96" height="96" align="left">
+
 # Palworld Server for Home Assistant
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+
+<br clear="left">
 
 A [HACS](https://hacs.xyz/) custom integration that connects Home Assistant to a Palworld
 dedicated server via its built-in [REST API](https://docs.palworldgame.com/category/rest-api).
@@ -52,6 +56,15 @@ In Home Assistant, go to **Settings → Devices & Services → Add Integration**
 - **Admin password** — the `AdminPassword` from your `PalWorldSettings.ini`.
 
 Polling interval can be adjusted afterward from the integration's **Configure** options.
+
+## Brand assets
+
+The icon shown above lives at [`docs/icon.jpg`](docs/icon.jpg). Home Assistant's own UI (the
+integrations picker, device cards, HACS store listing) doesn't read icons from this repo —
+it loads them from the [home-assistant/brands](https://github.com/home-assistant/brands)
+repository by domain. Resized, PNG-converted assets for that submission (`icon.png` 256×256,
+`icon@2x.png` 512×512, `logo.png`, `logo@2x.png`) are staged in [`brands/palworld/`](brands/palworld)
+under `custom_integrations/palworld/`, ready to be opened as a PR there.
 
 ## Disclaimer
 
