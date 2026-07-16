@@ -10,6 +10,13 @@
           "username": "Username",
           "password": "Admin password"
         }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate with Palworld server",
+        "description": "The admin password for this Palworld server is no longer valid. Enter the new password to reconnect.",
+        "data": {
+          "password": "Admin password"
+        }
       }
     },
     "error": {
@@ -18,7 +25,8 @@
       "unknown": "Unexpected error."
     },
     "abort": {
-      "already_configured": "This server is already configured."
+      "already_configured": "This server is already configured.",
+      "reauth_successful": "Reauthentication was successful."
     }
   },
   "options": {
