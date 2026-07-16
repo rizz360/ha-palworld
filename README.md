@@ -64,9 +64,11 @@ Polling interval can be adjusted afterward from the integration's **Configure** 
 The icon shown above lives at [`docs/icon.jpg`](docs/icon.jpg). Home Assistant's own UI (the
 integrations picker, device cards, HACS store listing) doesn't read icons from this repo —
 it loads them from the [home-assistant/brands](https://github.com/home-assistant/brands)
-repository by domain. Resized, PNG-converted assets for that submission (`icon.png` 256×256,
-`icon@2x.png` 512×512, `logo.png`, `logo@2x.png`) are staged in [`brands/palworld/`](brands/palworld)
-under `custom_integrations/palworld/`, ready to be opened as a PR there.
+repository by domain. Until that submission is merged, HACS falls back to the brand assets
+bundled in this repo at [`custom_components/palworld/brand/`](custom_components/palworld/brand)
+(`icon.png` 256×256, `icon@2x.png` 512×512, `logo.png`, `logo@2x.png`). The same PNGs are ready
+to be opened as a PR to `home-assistant/brands` under `custom_integrations/palworld/` for the
+icon to show up in HA's own UI.
 
 ## Disclaimer
 
