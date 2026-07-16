@@ -72,6 +72,16 @@ bundled in this repo at [`custom_components/palworld/brand/`](custom_components/
 to be opened as a PR to `home-assistant/brands` under `custom_integrations/palworld/` for the
 icon to show up in HA's own UI.
 
+## Development
+
+Tests use [`pytest-homeassistant-custom-component`](https://github.com/MatthewFlamm/pytest-homeassistant-custom-component),
+which relies on real Unix-domain sockets and doesn't run on native Windows — use WSL or Linux/macOS.
+
+```console
+pip install -r requirements_test.txt
+pytest tests/
+```
+
 ## Disclaimer
 
 This is an unofficial, community-built integration and is not affiliated with or endorsed by
