@@ -20,6 +20,8 @@ See [docs/api.md](docs/api.md) for the full API reference this integration is bu
 - Services: `palworld.announce`, `palworld.kick`, `palworld.ban`, `palworld.unban`,
   `palworld.save_world`, `palworld.shutdown`, `palworld.force_stop`.
 
+![Palworld Server device page in Home Assistant](docs/screenshot.png)
+
 ## Requirements
 
 Enable the REST API on your Palworld dedicated server in `PalWorldSettings.ini`:
