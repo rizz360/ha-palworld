@@ -1,0 +1,109 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Palworld server",
+        "description": "Enter the connection details for your Palworld dedicated server's REST API. The REST API must be enabled in PalWorldSettings.ini (RESTAPIEnabled=True).",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "username": "Username",
+          "password": "Admin password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect. Check the host, port, and that the REST API is enabled.",
+      "invalid_auth": "Invalid admin password.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This server is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Palworld server options",
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "server_fps": { "name": "Server FPS" },
+      "frame_time": { "name": "Frame time" },
+      "current_players": { "name": "Current players" },
+      "max_players": { "name": "Max players" },
+      "base_camps": { "name": "Base camps" },
+      "in_game_days": { "name": "In-game days" },
+      "uptime": { "name": "Uptime" },
+      "server_version": { "name": "Server version" }
+    },
+    "button": {
+      "save_world": { "name": "Save world" },
+      "force_stop": { "name": "Force stop" }
+    }
+  },
+  "services": {
+    "announce": {
+      "name": "Announce",
+      "description": "Broadcast a message to all players on the server.",
+      "fields": {
+        "device_id": { "name": "Server", "description": "The Palworld server device." },
+        "message": { "name": "Message", "description": "The message to announce." }
+      }
+    },
+    "kick": {
+      "name": "Kick player",
+      "description": "Kick a player from the server.",
+      "fields": {
+        "device_id": { "name": "Server", "description": "The Palworld server device." },
+        "userid": { "name": "Player ID", "description": "The player's userId." },
+        "message": { "name": "Message", "description": "Message shown to the kicked player." }
+      }
+    },
+    "ban": {
+      "name": "Ban player",
+      "description": "Ban a player from the server.",
+      "fields": {
+        "device_id": { "name": "Server", "description": "The Palworld server device." },
+        "userid": { "name": "Player ID", "description": "The player's userId." },
+        "message": { "name": "Message", "description": "Message shown to the banned player." }
+      }
+    },
+    "unban": {
+      "name": "Unban player",
+      "description": "Remove a ban for a player.",
+      "fields": {
+        "device_id": { "name": "Server", "description": "The Palworld server device." },
+        "userid": { "name": "Player ID", "description": "The player's userId to unban." }
+      }
+    },
+    "save_world": {
+      "name": "Save world",
+      "description": "Save the world to disk.",
+      "fields": {
+        "device_id": { "name": "Server", "description": "The Palworld server device." }
+      }
+    },
+    "shutdown": {
+      "name": "Shutdown server",
+      "description": "Gracefully shut down the server after a delay.",
+      "fields": {
+        "device_id": { "name": "Server", "description": "The Palworld server device." },
+        "waittime": { "name": "Wait time", "description": "Seconds to wait before shutting down." },
+        "message": { "name": "Message", "description": "Message announced before shutdown." }
+      }
+    },
+    "force_stop": {
+      "name": "Force stop server",
+      "description": "Immediately stop the server with no save or grace period.",
+      "fields": {
+        "device_id": { "name": "Server", "description": "The Palworld server device." }
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+announce:
+  name: Announce
+  description: Broadcast a message to all players on the server.
+  fields:
+    device_id:
+      name: Server
+      description: The Palworld server device.
+      required: true
+      selector:
+        device:
+          integration: palworld
+    message:
+      name: Message
+      description: The message to announce.
+      required: true
+      example: "The server will be restarting in 5 minutes."
+      selector:
+        text:
+
+kick:
+  name: Kick player
+  description: Kick a player from the server.
+  fields:
+    device_id:
+      name: Server
+      description: The Palworld server device.
+      required: true
+      selector:
+        device:
+          integration: palworld
+    userid:
+      name: Player ID
+      description: The player's userId (see the current_players sensor attributes).
+      required: true
+      example: "steam_00000000000000000"
+      selector:
+        text:
+    message:
+      name: Message
+      description: Message shown to the kicked player.
+      selector:
+        text:
+
+ban:
+  name: Ban player
+  description: Ban a player from the server.
+  fields:
+    device_id:
+      name: Server
+      description: The Palworld server device.
+      required: true
+      selector:
+        device:
+          integration: palworld
+    userid:
+      name: Player ID
+      description: The player's userId (see the current_players sensor attributes).
+      required: true
+      example: "steam_00000000000000000"
+      selector:
+        text:
+    message:
+      name: Message
+      description: Message shown to the banned player.
+      selector:
+        text:
+
+unban:
+  name: Unban player
+  description: Remove a ban for a player.
+  fields:
+    device_id:
+      name: Server
+      description: The Palworld server device.
+      required: true
+      selector:
+        device:
+          integration: palworld
+    userid:
+      name: Player ID
+      description: The player's userId to unban.
+      required: true
+      example: "steam_00000000000000000"
+      selector:
+        text:
+
+save_world:
+  name: Save world
+  description: Save the world to disk.
+  fields:
+    device_id:
+      name: Server
+      description: The Palworld server device.
+      required: true
+      selector:
+        device:
+          integration: palworld
+
+shutdown:
+  name: Shutdown server
+  description: Gracefully shut down the server after a delay.
+  fields:
+    device_id:
+      name: Server
+      description: The Palworld server device.
+      required: true
+      selector:
+        device:
+          integration: palworld
+    waittime:
+      name: Wait time
+      description: Seconds to wait before shutting down.
+      required: true
+      default: 60
+      selector:
+        number:
+          min: 0
+          max: 3600
+          unit_of_measurement: seconds
+    message:
+      name: Message
+      description: Message announced before shutdown.
+      selector:
+        text:
+
+force_stop:
+  name: Force stop server
+  description: Immediately stop the server with no save or grace period.
+  fields:
+    device_id:
+      name: Server
+      description: The Palworld server device.
+      required: true
+      selector:
+        device:
+          integration: palworld
